@@ -1,0 +1,20 @@
+"* * * * * *"
+ | | | | | |
+ | | | | | |
+ | | | | | day of week
+ | | | | month
+ | | | day of month
+ | | hour
+ | minute
+ second(optional)
+
+entrada 1:  09:01:01 ('1 1 9 * * *')
+saida 1:    12:10:02 ('2 10 12 * * *')
+entrada 2:  13:10:02 ('2 10 13 * * *')
+saida 2:    18:01:01 ('1 1 18 * * *')
+
+defaut:
+line 13: const task1 = cron.schedule('1 1 9 * * *', async () => {
+line 24: const task2 = cron.schedule('2 10 12 * * *', async () => {
+line 35: const task3 = cron.schedule('2 10 13 * * *', async () => {
+line 46: const task4 = cron.schedule('1 38 18 * * *', async () => {
