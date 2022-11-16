@@ -44,7 +44,7 @@ module.exports.baterPonto2 = async () => {
       "viaCentralWeb": true
     }),
     headers: {
-      'Authorization': 'Basic MzQzNDoyNHNuZkFAcmQyOjA=',
+      'Authorization': process.env.AUTH_TOKEN,
       'Content-Type': 'application/json'
     }
   });
