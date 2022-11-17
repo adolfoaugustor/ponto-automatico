@@ -1,5 +1,5 @@
-URL='https://pontowebapp.secullum.com.br/50911/IncluirPonto?funcionarioId=000'
-IP='44.220.252.222'
-AUTH_TOKEN='Basic MzTzNDoyRrEuZkF2cmQyOj@='
+CRON_URL='https://pontowebapp.secullum.com.br/50911/IncluirPonto?funcionarioId=000'
+CRON_IP='44.220.252.222'
+CRON_AUTH_TOKEN='Basic MzTzNDoyRrEuZkF2cmQyOj@='
 
 #50911 : codigo da basis no sistema da secullum

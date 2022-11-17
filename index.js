@@ -6,8 +6,8 @@ const event = new EventEmitter();
 // Make your callback function asynchronous so that you can use await
 async function doSomething() {
     console.log('Executando...');
-    ponto.baterPonto();
     console.log(new Date().toLocaleString());
+    return ponto.baterPonto().status;
 }
 
 const task1 = cron.schedule('1 1 9 * * *', async () => {
