@@ -7,10 +7,10 @@ const event = new EventEmitter();
 async function doSomething() {
     console.log('Executando...');
     console.log(new Date().toLocaleString());
-    return ponto.baterPonto().status;
+    return ponto.baterPonto();
 }
 
-const task1 = cron.schedule('1 1 9 * * *', async () => {
+const task1 = cron.schedule('1 01 9 * * *', async () => {
     console.log('Running a task1 every minute');
     let st = await doSomething();
     event.emit('JOB COMPLETED Start 1'+` ${st}`);
@@ -21,7 +21,7 @@ event.on('JOB COMPLETED Start 1', () => {
     task1.stop();
 });
 
-const task2 = cron.schedule('2 01 12 * * *', async () => {
+const task2 = cron.schedule('2 56 12 * * *', async () => {
     console.log('Running a task2 every minute');
     let st = await doSomething();
     event.emit('JOB COMPLETED exit 1'+` ${st}`);
@@ -32,7 +32,7 @@ event.on('JOB COMPLETED exit 1', () => {
     task2.stop();
 });
 
-const task3 = cron.schedule('2 01 13 * * *', async () => {
+const task3 = cron.schedule('2 00 13 * * *', async () => {
     console.log('Running a task3 every minute');
     let st = await doSomething();
     event.emit('JOB COMPLETED Start 2'+` ${st}`);
@@ -43,7 +43,7 @@ event.on('JOB COMPLETED Start 2', () => {
     task3.stop();
 });
 
-const task4 = cron.schedule('1 30 15 * * *', async () => {
+const task4 = cron.schedule('1 09 18 * * *', async () => {
     console.log('Running a task4 every minute');
     let st = await doSomething();
     event.emit('JOB COMPLETED exit 4'+` ${st}`);
