@@ -17,4 +17,4 @@ defaut:
 line 13: const task1 = cron.schedule('1 1 9 * * *', async () => {
 line 24: const task2 = cron.schedule('2 10 12 * * *', async () => {
 line 35: const task3 = cron.schedule('2 10 13 * * *', async () => {
-line 46: const task4 = cron.schedule('1 38 18 * * *', async () => {
+line 46: const task4 = cron.schedule('1 1 18 * * *', async () => {

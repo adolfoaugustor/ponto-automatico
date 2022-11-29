@@ -7,7 +7,7 @@ module.exports.baterPonto = async (req, res) => {
     "endereco": null,
     "foraDoPerimetro": false,
     "foto": null,
-    "identificacaoDispositivo": "45.230.252.116",
+    "identificacaoDispositivo": process.env.CRON_IP,
     "justificativa": null,
     "latitude": null,
     "longitude": null,
@@ -25,16 +25,18 @@ module.exports.baterPonto = async (req, res) => {
     },
     data : data
   };
-
-  const response =  await axios(config)
+  let arr = [];
+  
+  await axios(config)
   .then(function (response) {
     console.log(response.data);
+    arr.push(response.data);
   })
   .catch(function (error) {
     console.log(error);
   });
 
-  return json(response.data);
+  return json(arr);
 }
 
 
