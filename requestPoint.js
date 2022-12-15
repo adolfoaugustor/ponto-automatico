@@ -1,6 +1,7 @@
 require('dotenv').config();
 const axios = require("axios");
 
+
 module.exports.baterPonto = async (req, res) => {
   let data = JSON.stringify({
     "atividadeId": null,
