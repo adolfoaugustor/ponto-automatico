@@ -3,6 +3,7 @@
     "alert-node": "^5.0.3",
     "axios": "^1.2.0",
     "cron": "^2.1.0",
+    "cron-parser": "^4.9.0",
     "dotenv": "^16.0.3",
     "node-cron": "^3.0.2",
     "node-fetch": "^2.6.7",
