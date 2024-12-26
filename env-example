@@ -1,5 +1,0 @@
-CRON_URL='https://pontowebapp.secullum.com.br/50999/IncluirPonto?funcionarioId=999'
-CRON_IP='45.220.252.222'
-CRON_AUTH_TOKEN='Basic MzQzNDsdfassdfasdfASDFAD'
-
-#renomear arquvio para .env

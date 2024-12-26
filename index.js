@@ -16,7 +16,7 @@ function isWeekday(date) {
     return dayOfWeek >= 1 && dayOfWeek <= 5;
 }
 
-const task1 = cron.schedule('50 15 09 * * 1-5', async () => {
+const task1 = cron.schedule('50 02 13 * * 1-5', async () => {
     console.log('__________Entrada 1 Bora Codar__________');
     let st = await doSomething();
     notifier.notify('__________Entrada 1 Bora Codar__________ '+st);
@@ -24,7 +24,7 @@ const task1 = cron.schedule('50 15 09 * * 1-5', async () => {
 });
 event.on('Cron de entrada completo', () => {task1.stop()});
 
-const task2 = cron.schedule('30 01 12 * * 1-5', async () => {
+const task2 = cron.schedule('30 50 13 * * 1-5', async () => {
     console.log('----------Saída 1 Almoço----------');
     let st = await doSomething();
     notifier.notify('----------Saída 1 Almoço---------- '+st);
@@ -32,18 +32,18 @@ const task2 = cron.schedule('30 01 12 * * 1-5', async () => {
 });
 event.on('Cron de Saída completo', () => {task2.stop()});
 
-const task3 = cron.schedule('2 01 13 * * 1-5', async () => {
-    console.log('__________Entrada 2 Voltando___________');
+const task3 = cron.schedule('2 28 14 * * 1-5', async () => {
+    console.log('__________Entrada 2 Volta do Almoço___________');
     let st = await doSomething();
-    notifier.notify('__________Entrada 2 Voltando___________ '+st);
+    notifier.notify('__________Entrada 2 Volta do Almoço___________ '+st);
     event.emit(`Entrada 2 registrado... ${st}`);
 });
 event.on('Cron de Entrada completo 2', () => {task3.stop()});
 
-const task4 = cron.schedule('1 15 18 * * 1-5', async () => {
-    console.log('----------Saída 2 Vlw Tchau----------');
+const task4 = cron.schedule('1 40 21 * * 1-5', async () => {
+    console.log('----------Saída 2, fim do expediente!----------');
     let st = await doSomething();
-    notifier.notify('----------Saída 2 Vlw Tchau---------- '+st);
+    notifier.notify('----------Saída 2, fim do expediente!---------- '+st);
     event.emit(`Saída 2 registrado... ${st}`);
 });
 event.on('Cron de Saída completo', () => {task4.stop()});
